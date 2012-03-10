@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>{% block title %}Relectronics{% endblock %}</title>
+	{# TODO: Scripts/Css #}
+</head>
+
+<body>
+	<div id="container">
+		<div id="headder">
+		<p>Headder</p>
+		</div>
+		<div id="pageBody">
+			<div id="contents">
+			{% block contents %}
+			contents
+			{% endblock %}
+			</div>
+			<div id="sidebar">
+			{% block sidebar %}
+			Sidebar
+			{% endblock %}
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Relectronics | Suppliers{% endblock %}
+
+{% block contents %}
+{% if items %}
+<h2>Suppliers:</h2>
+<ul>
+	{% for supplier in suppliers %}
+	<li>{{supplier.name}}<p> : </p> <a href={{supplier.site}}> {{supplier.site}} </a> </li>
+	{% endfor %}
+</ul>
+{% else %}
+<h2>No Suppliers Found :(</h2>
+{% endif %}
+{% endblock %}
