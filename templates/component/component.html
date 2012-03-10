@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Relectronics | {{component.partNum}}{% endblock %}
+
+{% block contents %}
+<h2>Component:</h2>
+<h3>Description:</h3> <p> {{component.desc}} </p>
+<h3>Part #:</h3> <p> {{component.partNum}} </p>
+<h3>Stock:</h3> <p> {{component.stock}} </p>
+<h3>Supplier:</h3> <p> <a href="/parts/supplier/{{component.sup_id.pk}}/"> {{supplier}} </a> </p>
+{% endblock %}
