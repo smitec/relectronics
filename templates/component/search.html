@@ -3,14 +3,14 @@
 {% block title %}Relectronics | Search Stock{% endblock %}
 
 {% block contents %}
-{% if items %}
-<h2>Suppliers:</h2>
+{% if count > 0 %}
+<h2>Components:</h2>
 <ul>
-	{% for supplier in suppliers %}
-	<li>{{supplier.name}} : <a href={{supplier.site}}> {{supplier.site}} </a> </li>
+	{% for p in results %}
+	<li> <a href="/parts/{{p.pk}}">{{p.shortName}}</a>: Stock - {{p.stock}}</li>
 	{% endfor %}
 </ul>
 {% else %}
-<h2>No Suppliers Found :(</h2>
+<h2>No Components Found :(</h2>
 {% endif %}
 {% endblock %}

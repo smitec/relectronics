@@ -27,3 +27,18 @@ def component(request, p_id):
 	{	'component':p,
 		'supplier':s,
 	})
+
+def search(request):
+	if request.method == 'POST':
+		term = request.POST['term']
+		p = Component.objects.get(desc__contains=term)
+		return render_to_response('component/search.html',
+		{	'results':p,
+			'count':len(p)
+		})
+	else:
+		p = Component.objects.all()
+		return render_to_response('component/search.html',
+		{	'results':p,
+			'count':len(p)
+		})
