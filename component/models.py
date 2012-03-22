@@ -7,6 +7,7 @@ class Component(models.Model):
 	desc = models.CharField(max_length=200)
 	partNum = models.CharField(max_length=50)
 	stock = models.IntegerField()
+	points = models.IntegerField()
 	sup_id = models.ForeignKey('Supplier')
 	
 	def __unicode__(self):
