@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/basket/models.py</string>
+	<string>basket/models.py</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,7 +21,7 @@
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/basket/__init__.py</key>
+		<key>basket/__init__.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -35,7 +35,49 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/basket/models.py</key>
+		<key>basket/admin.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>31</integer>
+				<key>line</key>
+				<integer>3</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>basket/models.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>40</integer>
+				<key>line</key>
+				<integer>16</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>basket/tests.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>component/models.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -49,109 +91,7 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/basket/tests.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/component/admin.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>29</integer>
-				<key>line</key>
-				<integer>4</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-		</dict>
-		<key>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/component/models.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>39</integer>
-				<key>line</key>
-				<integer>9</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>1</integer>
-				<key>line</key>
-				<integer>9</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>39</integer>
-				<key>line</key>
-				<integer>9</integer>
-			</dict>
-		</dict>
-		<key>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/component/urls.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>39</integer>
-				<key>line</key>
-				<integer>5</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/settings.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>40</integer>
-				<key>line</key>
-				<integer>22</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/templates/base.html</key>
+		<key>templates/base.html</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -165,7 +105,7 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/urls.py</key>
+		<key>urls.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -179,12 +119,12 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/users/admin.py</key>
+		<key>users/admin.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>25</integer>
+				<integer>31</integer>
 				<key>line</key>
 				<integer>3</integer>
 			</dict>
@@ -193,50 +133,28 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/users/models.py</key>
+		<key>users/models.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>1</integer>
+				<integer>10</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>43</integer>
-				<key>line</key>
-				<integer>1</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>1</integer>
-			</dict>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/component/models.py</string>
-		<string>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/basket/tests.py</string>
-		<string>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/basket/models.py</string>
-		<string>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/basket/__init__.py</string>
-		<string>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/settings.py</string>
-		<string>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/users/models.py</string>
-		<string>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/component/admin.py</string>
-		<string>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/users/admin.py</string>
-		<string>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/templates/base.html</string>
-		<string>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/component/urls.py</string>
-		<string>/Volumes/data/Home/Documents/Programming/Python/2.x/Django/relectronics/urls.py</string>
+		<string>component/models.py</string>
+		<string>basket/models.py</string>
+		<string>basket/admin.py</string>
+		<string>users/admin.py</string>
+		<string>users/models.py</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>

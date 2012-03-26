@@ -3,13 +3,35 @@
 {% block title %}Relectronics | Search Stock{% endblock %}
 
 {% block contents %}
+<form action="/parts/search/" method="post">
+{% csrf_token %}
+Search: <input type="text" name="term"></input>
+<input type="submit" value="Submit" />
+</form>
 {% if count > 0 %}
 <h2>Components:</h2>
-<ul>
+<table border="1">
+	<tr>
+	<td>Part Number</td>
+	<td>Name</td>
+	<td>Stock</td>
+	</tr>
 	{% for p in results %}
-	<li> <a href="/parts/{{p.pk}}">{{p.shortName}}</a>: Stock - {{p.stock}}</li>
+	<tr>
+	<td>{{p.partNum}}</td>
+	<td><a href="/parts/{{p.pk}}">{{p.shortName}}</a></td>
+	<td>{{p.stock}}</td>
+	</tr>
 	{% endfor %}
-</ul>
+</table>
+<p>
+	{% if prev > 0 %}
+	<a href="/parts/search/{{prev}}">Previous</a>
+	{% endif %}
+	{% if next > 0 %}
+	<a href="/parts/search/{{next}}">Next</a>
+	{% endif %}
+</p>
 {% else %}
 <h2>No Components Found :(</h2>
 {% endif %}

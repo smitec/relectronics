@@ -8,6 +8,8 @@ class UserProfile(models.Model):
 	studentNum = models.CharField(max_length=8)
 	user = models.OneToOneField(User)
 	
+	def __unicode__(self):
+		return self.user.__unicode__()
 
 #save profile on create
 def create_user_profile(sender, instance, created, **kwargs):

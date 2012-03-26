@@ -28,17 +28,35 @@ def component(request, p_id):
 		'supplier':s,
 	})
 
-def search(request):
+def search(request, page=1):
+	page = int(page)
 	if request.method == 'POST':
 		term = request.POST['term']
-		p = Component.objects.get(desc__contains=term)
-		return render_to_response('component/search.html',
-		{	'results':p,
-			'count':len(p)
-		})
+		p = []
+		p = list(Component.objects.filter(desc__contains=term))
+		p = p + list(Component.objects.filter(shortName__contains=term))
+		p = p + list(Component.objects.filter(partNum__contains=term))
+		p = list(set(p))
+		
+		
 	else:
-		p = Component.objects.all()
-		return render_to_response('component/search.html',
-		{	'results':p,
-			'count':len(p)
-		})
+		p = list(Component.objects.all())
+	
+	prev = page - 1
+	
+	pf = p[20*(page-1):]
+	
+	if (len(pf) > 20):
+		pf = pf[:20]
+		next = page + 1
+	else:
+		next = 0
+		
+	
+	return render_to_response('component/search.html',
+	{	'results':pf,
+		'count':min(len(p),20),
+		'next': next,
+		'prev': prev,
+	}, context_instance=RequestContext(request)
+	)

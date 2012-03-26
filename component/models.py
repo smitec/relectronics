@@ -12,6 +12,9 @@ class Component(models.Model):
 	
 	def __unicode__(self):
 		return self.shortName
+	
+	def change_stock(self, val):
+		self.stock += val
 
 class Supplier(models.Model):
 	name = models.CharField(max_length=200)
