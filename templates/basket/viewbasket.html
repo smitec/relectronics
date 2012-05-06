@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Relectronics | View Basket{% endblock %}
+
+{% block content_header %}
+View Your Basket
+{% endblock %}
+
+{% block contents %}
+<form action="/basket/" method="post" class="well form-search">
+    {% csrf_token %}
+    <table class="table table-striped">
+    	<tr>
+    	<td>Part Number</td>
+    	<td>Quantity</td>
+    	<td>Remove</td>
+    	</tr>
+    {% for p,q in basket.items %}
+        <tr>
+        <td><a href="/parts/{{p}}/">{{ p }}</a></td>
+        <td>
+            <input type="text" class="input-medium search-query" name="q_{{p}}" value="{{ q }}">
+        </td>
+        <td><a href="/basket/remove/{{p}}">Remove Item</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+    <button type="submit" class="btn">Update</button>
+</form>
+<a class="btn" href="/user/create">Print Order</a>
+{% endblock %}

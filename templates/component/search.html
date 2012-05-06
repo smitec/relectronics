@@ -29,7 +29,7 @@ Search for Parts
 	<td>{{p.partNum}}</td>
 	<td><a href="/parts/{{p.pk}}">{{p.shortName}}</a></td>
 	<td>{{p.stock}}</td>
-	<td>Add To Cart</td>
+	<td><a href="/basket/add/{{p.partNum}}/">Add To Cart</a></td>
 	</tr>
 	{% endfor %}
 </table>

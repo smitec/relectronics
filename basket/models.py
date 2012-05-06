@@ -7,7 +7,6 @@ from django.dispatch import receiver
 
 # Create your models here.
 
-
 class Transaction(models.Model):
 	user_id = models.ForeignKey(User, related_name="user_id")
 	item_id = models.ForeignKey('component.Component')

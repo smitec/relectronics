@@ -6,7 +6,5 @@ urlpatterns = patterns('component.views',
 	url(r'^(?P<p_id>\d+)/$', 'component'),
 	url(r'^search/(?P<page>\d+)/$', 'search'),
 	url(r'^search/$', 'search'),
-#	url(r'^(?P<poll_id>\d+)/$', 'detail'),
-#	url(r'^(?P<poll_id>\d+)/results/$', 'results'),
-#	url(r'^(?P<poll_id>\d+)/vote/$', 'vote'),
+	url(r'^(?P<p_num>[0-9\-]+)/$', 'component')
 )
