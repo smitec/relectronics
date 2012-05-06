@@ -2,9 +2,12 @@
 
 {% block title %}Relectronics | Suppliers{% endblock %}
 
+{% block content_header %}
+Suppliers
+{% endblock %}
+
 {% block contents %}
 {% if items %}
-<h2>Suppliers:</h2>
 <ul>
 	{% for supplier in suppliers %}
 	<li>{{supplier.name}} : <a href={{supplier.site}}> {{supplier.site}} </a> </li>

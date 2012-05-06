@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Relectronics | Login{% endblock %}
+
+{% block content_header %}
+Login
+{% endblock %}
+
+{% block infobar %}
+
+{% if error %}
+<div class="alert alert-error">
+  <b>Login Failed:</b> Incorrect Username or Password
+</div>
+{% endif %}
+
+{% endblock %}
+
+{% block contents %}
+
+<form class="span4 offset2" action="/users/login/" method="post">
+{% csrf_token %}
+  <input type="text" class="input-medium" placeholder="username" name="uname">
+  <input type="password" class="input-medium" placeholder="password" name="pword">
+  <br>
+  <button type="submit" class="btn btn-primary">Sign in</button>
+  <a class="btn" href="/user/create">Create Account</a>
+</form>
+
+
+{% endblock %}

@@ -25,7 +25,6 @@ class Transaction(models.Model):
 @receiver(post_save, sender=Transaction)
 def update_if_approved(sender, instance, created, **kwargs):
 	if instance.approved and instance.approval_time == None:
-		print "a"
 		instance.item_id.change_stock(instance.quantity)
 		instance.approval_time = datetime.now()
 		instance.save()

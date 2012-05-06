@@ -1,42 +1,95 @@
 <html>
 <head>
-	<title>{% block title %}Relectronics{% endblock %}</title>
+<!-- ======================Head========================= -->
+    <title>{% block title %}Relectronics{% endblock %}</title>
+    <link rel="stylesheet" type="text/css"  href="http://static.uqebess.com/bootstrap/css/bootstrap.css" />
 </head>
 
-<body style="
-    padding: 0px;
-    margin: 0px;
-">
-	<div id="container">
-		<div id="pageBody">
-			<div id="sidebar" style="
-			    width: 150px;
-			    float: left;
-			    height: 100%;
-			    overflow-y: scroll;
-			    border-right: solid;
-			    border-right-color: #000;
-				padding: 15px;
-			">
-			{% block sidebar %}
-			<a href="/parts/search/">Parts</a>
-			<br>
-			<a href="/parts/suppliers">Suppliers</a>
-			{% endblock %}
-			</div>
-			<div id="contents" style="
-			    float: left;
-			    width: 800px;
-			    height: 100%;
-			    overflow-y: scroll;
-			    padding-left: 15px;
-				padding-top: 15px;
-			">
-			{% block contents %}
-			contents
-			{% endblock %}
-			</div>
-		</div>
-	</div>
+<body>
+<!-- ======================Nav Bar========================= -->
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="#">
+              Relectronics
+            </a>
+            <ul class="nav pull-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <i class="icon-user icon-white"></i>
+                      {% if user.is_authenticated %}
+                        {{ user.username }}
+                      {% else %}
+                        User Account
+                      {% endif %}
+                      <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    {% if user.is_authenticated %}
+                        <a href="/users/logout">Logout</a>
+                    {% else %}
+                        <a href="/users/login">Login</a>
+                    {% endif %}
+
+                </ul>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+        <div id="pageBody">
+<!-- ======================Side Bar========================= -->
+            <div id="sidebar" class="span4">
+                {% block sidebar %}
+                <div class="well">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">
+                            Parts
+                        </li>
+                        <li>
+                            <a href="/parts/search">
+                                <i class="icon-search"></i> 
+                                Search</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon-time"></i>
+                                Recent</a>
+                        </li>
+                        <li class="nav-header">
+                            Cart
+                        </li>
+                         <li>
+                            <a href="/basket/view">
+                                <i class="icon-shopping-cart"></i> 
+                                View Cart</a>
+                         </li>
+                    </ul>
+                </div>
+                {% endblock %}
+            </div>
+<!-- ======================Contents========================= -->
+            <div id="contents" class="span8 well">
+                <div class="page-header">
+                    <h1>
+                    {% block content_header %}
+                    Page Header
+                    {% endblock %}
+                    </h1>
+                </div>
+                {% block infobar %}
+                {% endblock %}
+                {% block contents %}
+                contents
+                {% endblock %}
+            </div>
+        </div>
+    </div>
 </body>
+
+<!-- ======================Scripts========================= -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://static.uqebess.com/bootstrap/js/bootstrap.js"></script>
+
 </html>

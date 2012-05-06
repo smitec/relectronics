@@ -2,25 +2,34 @@
 
 {% block title %}Relectronics | Search Stock{% endblock %}
 
+{% block content_header %}
+Search for Parts
+{% endblock %}
+
 {% block contents %}
-<form action="/parts/search/" method="post">
-{% csrf_token %}
-Search: <input type="text" name="term"></input>
-<input type="submit" value="Submit" />
+<!--===============Search Form =====================-->
+<form action="/parts/search/" method="post" class="well form-search">
+    {% csrf_token %}
+  <input type="text" class="input-medium search-query" name="term">
+  <button type="submit" class="btn">Search</button>
 </form>
+
+<!--=============== Results =====================-->
 {% if count > 0 %}
 <h2>Components:</h2>
-<table border="1">
+<table class="table table-striped">
 	<tr>
 	<td>Part Number</td>
 	<td>Name</td>
 	<td>Stock</td>
+	<td></td>
 	</tr>
 	{% for p in results %}
 	<tr>
 	<td>{{p.partNum}}</td>
 	<td><a href="/parts/{{p.pk}}">{{p.shortName}}</a></td>
 	<td>{{p.stock}}</td>
+	<td>Add To Cart</td>
 	</tr>
 	{% endfor %}
 </table>
