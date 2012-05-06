@@ -15,5 +15,6 @@ class UserProfile(models.Model):
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
         UserProfile.objects.create(user=instance)
+        #add the intial points transaction (Later)
 
 post_save.connect(create_user_profile, sender=User)
