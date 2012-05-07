@@ -31,3 +31,14 @@ def remove_from_basket(request, part_num):
         del basket[part_num]
     request.session['basket'] = basket
     return HttpResponseRedirect('/basket/')
+
+def print_view(request):
+    basket = request.session.get('basket', {})
+    result = {}
+    for k in basket.keys():
+        part = get_object_or_404(Component, partNum=k)
+        result[k] = [part.shortName, basket[k]]
+    request.session['basket'] = {}
+    return render_to_response('basket/printable.html',
+    {'basket':result}
+    )

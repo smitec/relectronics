@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+    <h1>Relectronics</h1>
+    <p>Print this page and bring it to an EBESS member
+    during Relectronics Trading Times. 
+    Your basket will now be empty.</p>
+    <table border="1">
+    	<tr>
+    	<td>Part Number</td>
+    	<td>Name</td>
+    	<td>Quantity</td>
+    	</tr>
+    {% for p,q in basket.items %}
+        <tr>
+        <td>{{ p }}</td>
+        {% for i in q%}
+            <td>{{ i }}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
